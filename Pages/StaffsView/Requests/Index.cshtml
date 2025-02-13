@@ -1,0 +1,58 @@
+@page
+@model QuotationApplication.Pages_Requests.IndexModel
+
+@{
+    ViewData["Title"] = "Requests";
+}
+
+<h1>Requests</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Request[0].Service)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Request[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Request[0].Fname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Request[0].Lname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Request[0].Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Request) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Service)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.RequestId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.RequestId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.RequestId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

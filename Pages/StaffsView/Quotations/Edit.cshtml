@@ -1,0 +1,88 @@
+@page
+@model QuotationApplication.Pages_Quotations.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Quotation</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Quotation.QuotationId" />
+            <div class="form-group">
+                
+                <label asp-for="Quotation.Service" class="control-label"></label>
+                <input asp-for="Quotation.Service" class="form-control" />
+                <span asp-validation-for="Quotation.Service" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="Quotation.Description" class="control-label"></label>
+                <input asp-for="Quotation.Description" class="form-control" />
+                <span asp-validation-for="Quotation.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="Quotation.Quantity" class="control-label"></label>
+                <input asp-for="Quotation.Quantity" class="form-control" />
+                <span asp-validation-for="Quotation.Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="Quotation.Price" class="control-label"></label>
+                <input asp-for="Quotation.Price" class="form-control" />
+                <span asp-validation-for="Quotation.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="Quotation.Tax" class="control-label"></label>
+                <input asp-for="Quotation.Tax" class="form-control" />
+                <span asp-validation-for="Quotation.Tax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="Quotation.Amount" class="control-label"></label>
+                <input asp-for="Quotation.Amount" class="form-control" />
+                <span asp-validation-for="Quotation.Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="Quotation.Status" class="control-label"></label>
+                <select asp-for="Quotation.Status" class="form-control">
+                    <option value="Outstanding">Outstanding</option>
+                    <option value="Accepted">Accepted</option>
+                </select>
+                @* <input asp-for="Quotation.Status" class="form-control" /> *@
+                <span asp-validation-for="Quotation.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="Quotation.Date" class="control-label"></label>
+                <input asp-for="Quotation.Date" class="form-control" />
+                <span asp-validation-for="Quotation.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="Quotation.ExpireON" class="control-label"></label>
+                <input asp-for="Quotation.ExpireON" class="form-control" />
+                <span asp-validation-for="Quotation.ExpireON" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
