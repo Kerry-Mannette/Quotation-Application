@@ -1,0 +1,162 @@
+html {
+  font-size: 16px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+.title{
+  margin-top: 8rem;
+  margin-bottom: -6rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.title-2{
+  margin-top: 8rem;
+  margin-bottom: -4rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.title-3{
+  margin-top: 6rem;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.btn-primary{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.management_menu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 20rem;
+  margin-top: 2rem;
+}
+
+.menu_buttons button{
+ display: block;
+ margin: 1rem;
+ padding: 0.5rem 2rem 0.5rem 2rem;
+ width: 10rem;
+ border: none;
+ border-radius: 1rem;
+ font-size: 1rem;
+ cursor: pointer;
+ background-color: #258cfb;
+ color: #ffffff;
+}
+.menu_buttons a{
+ text-decoration: none;
+ }
+
+.menu_buttons button:hover{
+  background-color: #72b0f3;
+
+ }
+
+ .btn-style-2 button{
+  width: 15rem;
+ }
+
+ .btn-2{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+ }
+ 
+ .space1{
+  margin-left: 2rem;
+ } 
+ .space2{
+  margin-left: 1.8rem;
+ }
+
+ .space3{
+  margin-left: 4.6rem;
+ }
+
+ .space4{
+  margin-left: 3.6rem;
+ }
+
+ .label{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 10rem;
+ }
+
+ .dropbtn {
+  background-color: #258cfb;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #258cfb;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
